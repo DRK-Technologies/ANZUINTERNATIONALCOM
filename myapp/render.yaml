@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: myapp
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn Anzu_Com.wsgi"
+    envVars:
+      
+      - key: DEBUG
+        value: False
+      - key: SECRET_KEY
+        generateValue: true

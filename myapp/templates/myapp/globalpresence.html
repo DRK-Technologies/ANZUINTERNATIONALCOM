@@ -1,0 +1,156 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}Global Presence{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- <link rel="stylesheet" href="{% static 'css/home.css' %}"> -->
+  <link rel="stylesheet" href="{% static 'css/about1.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body >
+    
+
+<section class="about-overview">
+    <!-- Top Banner Image Section -->
+    <div class="top-image-section">
+        <div class="image-text-overlay">
+          <h1>Global Presence</h1>
+        </div>
+        <img src="{% static 'images/80906.jpg' %}" alt="About Us Banner">
+      </div>
+      
+  
+    <!-- Breadcrumb Section -->
+    <div class="global-breadcrumb-section">
+        <div class="container">
+          <nav class="breadcrumb-nav" aria-label="breadcrumb">
+            <ul class="breadcrumb-list">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/about">About Us</a></li>
+
+              <li><a href="/about/ourstory">Our Story</a></li>
+              <li class="active">Global Presence</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="headquarters-section">
+        <div class="headquarters-wrapper">
+          <div class="hq-image">
+            <img src="{% static 'images/office.png' %}" alt="Our Headquarters">
+          </div>
+          <div class="hq-content">
+            <h2>Our Headquarters</h2>
+            <p>Email: support@anzuinternational.com</p>
+            <p>Phone: +91 9994053859</p>
+            <p>Office Hours: Mon - Sat: 9:00 AM – 6:00 PM</p>
+            <p>Address: 2/73 B10, Kalluri Nagar, Maravanmadam, Thoothukudi, Tamil Nadu - 628101, India.</p>
+          </div>
+        </div>
+      </div>
+      
+      
+    <!-- Overview Content Section -->
+    <div class="overview-section">
+        <div class="overview-content container">
+          <h2>Global Presence</h2>
+          <p>
+            Anzu International has built a robust global presence, connecting suppliers and clients across continents. Our expansive reach allows us to operate seamlessly in diverse markets, ensuring efficiency, compliance, and timely delivery of goods worldwide.
+          </p>
+          <p>
+            With strategic partnerships in Asia, Africa , and the Middle East, we cater to a wide range of industries and foster long-term relationships built on trust and performance.
+          </p>
+          <p>
+            Our global operations are supported by a dedicated team, advanced logistics, and a deep understanding of international trade regulations—positioning us as a reliable partner in the global supply chain.
+          </p>
+        </div>
+      </div>
+      
+      
+  
+    <!-- Three Images Row Section -->
+    <div class="three-images-section">
+      <div class="three-images-slider">
+        <div class="three-images-track">
+          <img src="{% static 'images/flag-united-arab-emirates.jpg' %}" alt="UAE">
+          <img src="{% static 'images/flag-india.jpg' %}" alt="INDIA">
+          <img src="{% static 'images/flag-ghana.jpg' %}" alt="GHANA">
+          <img src="{% static 'images/flag-benin.jpg' %}" alt="BENIN">
+
+    
+          <!-- Duplicate the images for a smooth loop -->
+          <img src="{% static 'images/flag-united-arab-emirates.jpg' %}" alt="UAE">
+          <img src="{% static 'images/flag-india.jpg' %}" alt="INDIA">
+          <img src="{% static 'images/flag-ghana.jpg' %}" alt="GHANA">
+          <img src="{% static 'images/flag-benin.jpg' %}" alt="BENIN">
+
+        </div>
+      </div>
+    </div>
+  
+    <!-- Glimpse of Our Story Section -->
+    <section class="glimpse-story-section" style="background-image: url(&quot;{% static 'images/group-people-working-out-business-plan-office.jpg' %}&quot;);">
+        <div class="glimpse-story-banner">
+          <div class="banner-content container">
+            <h3>Our Team</h3>
+            <p>
+              At Anzu International, our success is powered by a passionate and experienced team dedicated to excellence. Each member brings unique expertise, fostering collaboration, innovation, and trust at every level. Together, we drive forward our mission to connect markets and deliver value worldwide.
+            </p>
+            <a href="/about/our-team" class="know-more-button">Learn More</a>
+          </div>
+        </div>
+      </section>
+      
+      
+  </section>
+  <style>
+    .three-images-section {
+      overflow: hidden;
+      width: 100%;
+      background-color: #fff; /* Optional: for contrast */
+      padding: 20px 0;
+    }
+    
+    .three-images-slider {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .three-images-track {
+      display: flex;
+      width: calc(300px * 6); /* Adjust based on image size & count */
+      animation: scroll-left 20s linear infinite;
+    }
+    
+    .three-images-track img {
+      width: 300px; /* Adjust as needed */
+      height: auto;
+      margin: 0 10px;
+      border-radius: 8px;
+    }
+    
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    
+  </style>
+</body>
+{% endblock %}

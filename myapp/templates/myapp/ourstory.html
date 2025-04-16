@@ -1,0 +1,137 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}Our Story{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- <link rel="stylesheet" href="{% static 'css/home.css' %}"> -->
+  <link rel="stylesheet" href="{% static 'css/about1.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body >
+    
+
+<section class="about-overview">
+    <!-- Top Banner Image Section -->
+    <div class="top-image-section">
+        <div class="image-text-overlay">
+          <h1>Our Story</h1>
+        </div>
+        <img src="{% static 'images/businessman-big-office.jpg' %}" alt="About Us Banner">
+      </div>
+      
+  
+    <!-- Breadcrumb Section -->
+    <div class="breadcrumb-section">
+        <div class="container">
+          <nav class="breadcrumb-nav" aria-label="breadcrumb">
+            <ul class="breadcrumb-list">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About Us</a></li>            
+
+              <li class="active">Our Story</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+  
+    <!-- Overview Content Section -->
+    <div class="overview-section">
+        <div class="overview-content container">
+          <h2>Our Story</h2>
+          <p>
+            What began as a small trading venture has now grown into a globally trusted name in the import and export industry. At Anzu International, our story is one of ambition, resilience, and a relentless drive to connect markets across the world.
+          </p>
+          <p>
+            Rooted in strong values and guided by a vision for global collaboration, we've built enduring relationships with partners and clients in multiple countries. Our team has overcome challenges, embraced innovation, and adapted to the ever-changing landscape of international trade.
+          </p>
+          <p>
+            From humble beginnings to global operations, our journey reflects our passion for excellence and our commitment to delivering value at every step of the supply chain.
+          </p>
+        </div>
+      </div>
+      
+  
+    <!-- Three Images Row Section -->
+    <div class="three-images-section">
+      <div class="three-images-slider">
+        <div class="three-images-track">
+          <img src="{% static 'images/aerial-view-computer-laptop-wooden-table.jpg' %}" alt="Global Network">
+          <img src="{% static 'images/businessman-drawing-keys-success.jpg' %}" alt="Success Planning">
+          <img src="{% static 'images/training-achieve-objectives.jpg' %}" alt="Training Goals">
+          <img src="{% static 'images/group-diverse-business-people-with-growth-graph.jpg' %}" alt="Growth Team">
+    
+          <!-- Duplicate for seamless loop -->
+          <img src="{% static 'images/aerial-view-computer-laptop-wooden-table.jpg' %}" alt="Global Network">
+          <img src="{% static 'images/businessman-drawing-keys-success.jpg' %}" alt="Success Planning">
+          <img src="{% static 'images/training-achieve-objectives.jpg' %}" alt="Training Goals">
+          <img src="{% static 'images/group-diverse-business-people-with-growth-graph.jpg' %}" alt="Growth Team">
+        </div>
+      </div>
+    </div>
+    
+  
+    <!-- Glimpse of Our Story Section -->
+    <section class="glimpse-story-section" style="background-image: url(&quot;{% static 'images/80906.jpg' %}&quot;);">
+        <div class="glimpse-story-banner">
+            <div class="banner-content container">
+              <h3>Global Presence</h3>
+              <p>
+                With an extensive network spanning continents, Anzu International has established a strong global footprint in the import and export industry. Our presence in key markets ensures seamless operations, timely deliveries, and trusted partnerships across borders.
+              </p>
+              <a href="/about/global-presence" class="know-more-button">Learn More</a>
+            </div>
+          </div>
+          
+      </section>
+      
+  </section>
+  <style>
+    .three-images-section {
+      overflow: hidden;
+      width: 100%;
+      background-color: #fff; /* Optional: for contrast */
+      padding: 20px 0;
+    }
+    
+    .three-images-slider {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .three-images-track {
+      display: flex;
+      width: calc(300px * 6); /* Adjust based on image size & count */
+      animation: scroll-left 20s linear infinite;
+    }
+    
+    .three-images-track img {
+      width: 300px; /* Adjust as needed */
+      height: auto;
+      margin: 0 10px;
+      border-radius: 8px;
+    }
+    
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    
+  </style>
+</body>
+{% endblock %}

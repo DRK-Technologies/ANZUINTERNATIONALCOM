@@ -1,0 +1,142 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}Our Team{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- <link rel="stylesheet" href="{% static 'css/home.css' %}"> -->
+  <link rel="stylesheet" href="{% static 'css/about1.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body >
+    
+
+<section class="about-overview">
+    <!-- Top Banner Image Section -->
+    <div class="top-image-section">
+        
+        <img src="{% static 'images/group-people-working-out-business-plan-office.jpg' %}" alt="About Us Banner">
+      </div>
+      
+  
+    <!-- Breadcrumb Section -->
+    <div class="breadcrumb-section">
+        <div class="container">
+          <nav class="breadcrumb-nav" aria-label="breadcrumb">
+            <ul class="breadcrumb-list">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/about/our-story">Our story</a></li>
+              <li><a href="/about/global-presence">Global Presence</a></li>
+              <li class="active">Our Team</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+      
+      
+    <!-- Overview Content Section -->
+    <div class="overview-section">
+        <div class="overview-content container">
+          <h2>Our Team</h2>
+          <p>
+            ‟At Anzu International, our team is the driving force behind our global success. Comprised of skilled professionals from diverse backgrounds, we bring together deep industry expertise, innovative thinking, and a shared commitment to excellence.”
+          </p>
+          <p>
+            ‟From logistics and operations to finance and client relations, each team member plays a vital role in delivering exceptional service and sustaining long-term partnerships. We foster a culture of collaboration, integrity, and continuous growth.”
+          </p>
+          <p>
+            ‟United by a common vision, our people work across departments and geographies to ensure Anzu International remains at the forefront of global trade.”
+          </p>
+        </div>
+      </div>
+      
+      
+      
+      
+      <section class="leadership-section">
+        <div class="leader-card">
+          <div class="leader-image">
+            <img src="{% static 'images/office.png' %}" alt="Karthick Loganathan">
+          </div>
+          <div class="leader-info">
+            <h3>Karthick Loganathan</h3>
+            <h5>Executive Chairman, Chief Executive Officer (CEO)</h5>
+            <p>
+              As the visionary behind Anzu International, Karthick drives strategic growth and global expansion. With a strong foundation in international trade, he leads with a commitment to excellence, innovation, and long-term value creation.
+            </p>
+          </div>
+        </div>
+      
+        <div class="leader-card">
+          <div class="leader-image">
+            <img src="{% static 'images/office.png' %}" alt="Robinson">
+          </div>
+          <div class="leader-info">
+            <h3>Robinson</h3>
+            <h5>Managing Director, Chief Operating Officer (COO)</h5>
+            <p>
+              Robinson oversees end-to-end operations, ensuring smooth logistics, supply chain efficiency, and execution of global trade activities. His leadership strengthens our operational excellence and customer satisfaction.
+            </p>
+          </div>
+        </div>
+      
+        <div class="leader-card">
+          <div class="leader-image">
+            <img src="{% static 'images/office.png' %}" alt="Saravana">
+          </div>
+          <div class="leader-info">
+            <h3>Saravanan</h3>
+            <h5>General Manager, Operations</h5>
+            <p>
+              Saravana plays a key role in managing daily operations and optimizing resource allocation. His deep understanding of process management helps streamline our import-export flow and enhance delivery timelines.
+            </p>
+          </div>
+        </div>
+      
+        <div class="leader-card">
+          <div class="leader-image">
+            <img src="{% static 'images/office.png' %}" alt="Vignesh">
+          </div>
+          <div class="leader-info">
+            <h3>Vignesh</h3>
+            <h5>General Manager, Marketing</h5>
+            <p>
+              Vignesh leads the brand and marketing efforts at Anzu International. His creative insights and strategic planning help position the company effectively across markets and drive visibility for our products worldwide.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="glimpse-story-section" style="background-image: url(&quot;{% static 'images/austin-distel-wD1LRb9OeEo-unsplash.jpg' %}&quot;);">
+        <div class="glimpse-story-banner">
+            <div class="banner-content container">
+                <h3>Careers</h3>
+                <p>
+                  At Anzu International, we believe our people are our greatest strength. We're always looking for passionate, driven individuals to join our dynamic team. Whether you're starting out or seeking your next big opportunity, discover how you can grow with us in a globally connected environment.
+                </p>
+                <a href="#" class="know-more-button">Join Our Team</a>
+              </div>
+          </div>
+          
+      </section>
+      
+      
+  
+    
+      
+      
+  </section>
+  
+</body>
+{% endblock %}

@@ -1,0 +1,277 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}ANZU Premium Whole Cashews{% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANZU Premium Whole Cashews</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  
+<style>
+    body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+
+  .product-header {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .product-media {
+    flex: 1;
+  }
+
+  .product-media video, .product-media img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .product-info h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .product-info .status {
+    font-size: 14px;
+    color: green;
+    margin-bottom: 20px;
+  }
+
+  .swatches {
+    display: flex;
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .swatch {
+    padding: 10px 14px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .swatch:hover {
+    border-color: #333;
+  }
+
+  .swatch.selected {
+    border-color: #000;
+    background: #f0f0f0;
+    font-weight: 600;
+  }
+
+  .contact-button {
+    padding: 12px 24px;
+    background: #000;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    width: fit-content;
+    transition: background 0.2s;
+  }
+
+  .contact-button:hover {
+    background: #222;
+  }
+
+  .tags, .delivery {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+  }
+
+  section {
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-left: 4px solid #000;
+    padding-left: 10px;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  ul li {
+    margin-bottom: 10px;
+  }
+
+  .specs table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  .specs th, .specs td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  .specs th {
+    background: #f7f7f7;
+    width: 30%;
+  }
+
+  .related-products h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .related-grid img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.2s;
+  }
+
+  .related-grid img:hover {
+    transform: scale(1.02);
+  }
+
+  .related-product h4 {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+}
+
+.related-product a:hover h4 {
+  color: #ee2121; /* Optional: change color on hover for better UX */
+}
+  @media (max-width: 768px) {
+    .product-header {
+      flex-direction: column;
+    }
+  }
+</style>
+  
+</head>
+<body>
+  <div class="container">
+    <div class="product-header">
+      <div class="product-media">
+        <div class="product-media">
+            <img src="{% static 'images/raw-cashews-nuts-bowl-dark-background.jpg' %}" alt="Cashew Nuts" />
+          </div>
+      </div>
+      <div class="product-info">
+        <h1>ANZU Premium Whole Cashews Nuts</h1>
+        <p class="status">In Stock</p>
+        <p class="tags">Grades:</p>
+        <div class="swatches" id="swatchContainer">
+          <div class="swatch selected">W180</div>
+          <div class="swatch">W210</div>
+          <div class="swatch">W240</div>
+          <div class="swatch">W320</div>
+          <div class="swatch">W450</div>
+          <div class="swatch">SW</div>
+        </div>
+        <a href="{% url 'contact' %}" class="contact-button">Contact Us to Order</a>
+        <!-- <p class="tags">Tags: caju, cashews, kaju, Whole Cashews</p> -->
+        <p class="delivery">🚚 Global Shipping & Delivery Available</p>
+      </div>
+    </div>
+
+    <section class="features">
+      <h2>Features & Details</h2>
+      <ul>
+        <li>Rich, buttery and delicious taste — perfect for snacking or making cashew milk.</li>
+        <li>Low in sugar, high in fiber, heart-healthy fats, and plant protein.</li>
+        <li>100% Vegetarian and Vegan-friendly with no added sweeteners or colorants.</li>
+        <li>Non-GMO, fat-free and free from preservatives.</li>
+      </ul>
+    </section>
+
+    <section class="description">
+      <h2>Description</h2>
+      <p>
+        Cashews are a nutritional powerhouse loaded with iron, copper, zinc, phosphorus, magnesium, and selenium. They have a rich nutty flavor, perfect for snacking or making spreads. Pureed cashews resemble other nut butters in texture and taste. Great substitutes include almonds, pine nuts, or macadamias depending on the application.
+      </p>
+    </section>
+
+    <section class="specs">
+      <h2>Product Specifications</h2>
+      <table>
+        <tr><th>Brand</th><td>ANZU</td></tr>
+        <tr><th>Manufacturer</th><td>ANZU International Pvt Ltd</td></tr>
+        <tr><th>Origin</th><td>India</td></tr>
+        <tr><th>Food Type</th><td>Vegetarian</td></tr>
+        <tr><th>Preservation</th><td>Dry</td></tr>
+        <tr><th>FSSAI Approved</th><td>Yes</td></tr>
+        <tr><th>Storage Instructions</th><td>Store in a cool, dry place</td></tr>
+        <tr><th>Allergen Info</th><td>None</td></tr>
+      </table>
+    </section>
+
+    <section class="related-products">
+        <h3>Other Products You May Like</h3>
+        <div class="related-grid">
+          <div class="related-product">
+            <a href="{% url 'export_pallets' %}">
+              <img src="{% static 'images/pexels-nc-farm-bureau-mark-12278592.jpg' %}" alt="export pallets" />
+              <h4>Export Pallets</h4> <!-- Added title below the image -->
+            </a>
+          </div>
+          <div class="related-product">
+            <a href="{% url 'goli_soda' %}">
+              <img src="{% static 'images/F599FFCD-61BB-4DCA-B18B-A59B6C1E9E96.png' %}" alt="Golisoda" />
+              <h4>Goli Soda</h4> <!-- Added title below the image -->
+            </a>
+          </div>
+        </div>
+      </section>
+      
+  </div>
+
+  <script>
+    document.querySelectorAll('.swatch').forEach(swatch => {
+      swatch.addEventListener('click', () => {
+        document.querySelectorAll('.swatch').forEach(s => s.classList.remove('selected'));
+        swatch.classList.add('selected');
+      });
+    });
+  </script>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,126 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> -->
+  <!-- <link rel="stylesheet" href="{% static 'css/home.css' %}"> -->
+  <link rel="stylesheet" href="{% static 'css/about1.css' %}">
+
+  <!-- <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"> -->
+</head>
+
+<body>
+<!-- about.html -->
+
+<section class="about-overview">
+    <!-- Top Banner Image Section -->
+    <div class="top-image-section">
+      <img src="{% static 'images/about-us-information-service-sharing-join-concept.jpg' %}" alt="About Us Banner">
+    </div>
+  
+    <!-- Breadcrumb Section -->
+    <div class="breadcrumb-section">
+        <div class="container">
+          <nav class="breadcrumb-nav" aria-label="breadcrumb">
+            <ul class="breadcrumb-list">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li class="active">Overview</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+  
+    <!-- Overview Content Section -->
+    <div class="overview-section">
+      <div class="overview-content container">
+        <h2>Company Overview</h2>
+        <p>
+          At Anzu International, we are committed to facilitating seamless global trade. With a foundation built on integrity and innovation, we’ve expanded our reach across continents to ensure timely delivery of high-quality goods. Our operations span multiple industries, specializing in both import and export of commodities, with a focus on customer satisfaction and long-term relationships.
+        </p>
+        <p>
+          Through efficient logistics, deep market knowledge, and a reliable supply chain, we serve clients across the globe and empower them to thrive in a connected marketplace.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Three Images Row Section -->
+    <div class="three-images-section">
+      <div class="three-images-slider">
+        <div class="three-images-track">
+          <img src="{% static 'images/network-graphic-overlay-banner-background.jpg' %}" alt="Global Network">
+          <img src="{% static 'images/view-inside-new-warehouse-mezzanine-floor-looking-into-hall.jpg' %}" alt="Warehouse">
+          <img src="{% static 'images/industrial-port-container-yard.jpg' %}" alt="Shipping">
+          <img src="{% static 'images/raw-cashews-nuts-marble-background.jpg' %}" alt="Cashews">
+    
+          <!-- Duplicate images for seamless looping -->
+          <img src="{% static 'images/network-graphic-overlay-banner-background.jpg' %}" alt="Global Network">
+          <img src="{% static 'images/view-inside-new-warehouse-mezzanine-floor-looking-into-hall.jpg' %}" alt="Warehouse">
+          <img src="{% static 'images/industrial-port-container-yard.jpg' %}" alt="Shipping">
+          <img src="{% static 'images/raw-cashews-nuts-marble-background.jpg' %}" alt="Cashews">
+        </div>
+      </div>
+    </div>
+    
+  
+    <!-- Glimpse of Our Story Section -->
+    <section class="glimpse-story-section" style="background-image: url(&quot;{% static 'images/businessman-big-office.jpg' %}&quot;);">
+        <div class="glimpse-story-banner">
+          <div class="banner-content container">
+            <h3>Our Story</h3>
+            <p>
+              From humble beginnings to becoming a trusted name in global trade, our journey is one of resilience, passion, and purpose. Discover how Anzu International evolved with time while holding on to its core values.
+            </p>
+            <a href="/about/ourstory" class="know-more-button">Learn More</a>
+          </div>
+        </div>
+      </section>
+      
+  </section>
+  <style>
+    .three-images-section {
+      overflow: hidden;
+      width: 100%;
+      background-color: #fff; /* Optional: for contrast */
+      padding: 20px 0;
+    }
+    
+    .three-images-slider {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .three-images-track {
+      display: flex;
+      width: calc(300px * 6); /* Adjust based on image size & count */
+      animation: scroll-left 20s linear infinite;
+    }
+    
+    .three-images-track img {
+      width: 300px; /* Adjust as needed */
+      height: auto;
+      margin: 0 10px;
+      border-radius: 8px;
+    }
+    
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    
+  </style>
+</body>
+{% endblock %}

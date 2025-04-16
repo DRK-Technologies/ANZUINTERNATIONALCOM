@@ -1,0 +1,273 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}ANZU Export Pallets{% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANZU Export Pallets</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .product-header {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .product-media {
+      flex: 1;
+    }
+
+    .product-media video, .product-media img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .product-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .product-info h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .product-info .status {
+      font-size: 14px;
+      color: green;
+      margin-bottom: 20px;
+    }
+
+    .swatches {
+      display: flex;
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .swatch {
+      padding: 10px 14px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .swatch:hover {
+      border-color: #333;
+    }
+
+    .swatch.selected {
+      border-color: #000;
+      background: #f0f0f0;
+      font-weight: 600;
+    }
+
+    .contact-button {
+      padding: 12px 24px;
+      background: #000;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      width: fit-content;
+      transition: background 0.2s;
+    }
+
+    .contact-button:hover {
+      background: #222;
+    }
+
+    .tags, .delivery {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      border-left: 4px solid #000;
+      padding-left: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .specs table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .specs th, .specs td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .specs th {
+      background: #f7f7f7;
+      width: 30%;
+    }
+
+    .related-products h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .related-grid img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.2s;
+    }
+
+    .related-grid img:hover {
+      transform: scale(1.02);
+    }
+
+    .related-product h4 {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+}
+
+.related-product a:hover h4 {
+  color: #ee2121; /* Optional: change color on hover for better UX */
+}
+    @media (max-width: 768px) {
+      .product-header {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="product-header">
+      <div class="product-media">
+        <img src="{% static 'images/pexels-nc-farm-bureau-mark-12278592.jpg' %}" alt="Export Pallets" />
+      </div>
+      <div class="product-info">
+        <h1>ANZU Export-Grade Wooden Pallets</h1>
+        <p class="status">In Stock</p>
+        <p class="tags">Sizes:</p>
+        <div class="swatches" id="swatchContainer">
+          <div class="swatch selected">Standard</div>
+          <div class="swatch">Euro</div>
+          <div class="swatch">Custom Size</div>
+          <div class="swatch">Two-way</div>
+          <div class="swatch">Four-way</div>
+        </div>
+        <a href="{% url 'contact' %}" class="contact-button">Contact Us to Order</a>
+        <!-- <p class="tags">Tags: export pallets, wooden pallets, cargo pallets, ISPM 15, heat-treated</p> -->
+        <p class="delivery">🌍 Ready for Export – Global Delivery Available</p>
+      </div>
+    </div>
+
+    <section class="features">
+      <h2>Features & Details</h2>
+      <ul>
+        <li>Durable wooden pallets ideal for heavy-duty export shipments.</li>
+        <li>Compliant with ISPM 15 heat-treatment standards for international shipping.</li>
+        <li>Available in a range of sizes including Euro, standard, and custom dimensions.</li>
+        <li>Designed for both two-way and four-way forklift access.</li>
+      </ul>
+    </section>
+
+    <section class="description">
+      <h2>Description</h2>
+      <p>
+        ANZU Export Pallets are built for strength and reliability in global logistics. Crafted from high-quality wood and treated for compliance with international standards, these pallets ensure safe and efficient transportation of goods. Whether for industrial use, warehousing, or international exports, our pallets are the trusted choice for secure cargo movement.
+      </p>
+    </section>
+
+    <section class="specs">
+      <h2>Product Specifications</h2>
+      <table>
+        <tr><th>Brand</th><td>ANZU</td></tr>
+        <tr><th>Manufacturer</th><td>ANZU International Pvt Ltd</td></tr>
+        <tr><th>Origin</th><td>India</td></tr>
+        <tr><th>Material</th><td>High-quality heat-treated wood</td></tr>
+        <tr><th>Type</th><td>2-way / 4-way entry</td></tr>
+        <tr><th>Compliance</th><td>ISPM 15 Certified</td></tr>
+        <tr><th>Load Capacity</th><td>1000–1500 kg (varies by design)</td></tr>
+        <tr><th>Size Options</th><td>Standard, Euro, Custom</td></tr>
+        <tr><th>Finish</th><td>Heat treated & debarked</td></tr>
+      </table>
+    </section>
+
+    <section class="related-products">
+        <h3>Other Products You May Like</h3>
+        <div class="related-grid">
+          <div class="related-product">
+            <a href="{% url 'cashew_nuts' %}">
+              <img src="{% static 'images/raw-cashews-nuts-bowl-dark-background.jpg' %}" alt="cashew nuts" />
+              <h4>Cashew Nuts</h4> <!-- Added title below the image -->
+            </a>
+          </div>
+          <div class="related-product">
+            <a href="{% url 'goli_soda' %}">
+              <img src="{% static 'images/F599FFCD-61BB-4DCA-B18B-A59B6C1E9E96.png' %}" alt="Golisoda" />
+              <h4>Goli Soda</h4> <!-- Added title below the image -->
+            </a>
+          </div>
+        </div>
+      </section>
+      
+  </div>
+
+  <script>
+    document.querySelectorAll('.swatch').forEach(swatch => {
+      swatch.addEventListener('click', () => {
+        document.querySelectorAll('.swatch').forEach(s => s.classList.remove('selected'));
+        swatch.classList.add('selected');
+      });
+    });
+  </script>
+</body>
+</html>
+{% endblock %}

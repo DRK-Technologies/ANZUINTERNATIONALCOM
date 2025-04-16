@@ -1,0 +1,291 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}Logistics & Shipping{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- <link rel="stylesheet" href="{% static 'css/home.css' %}"> -->
+  <link rel="stylesheet" href="{% static 'css/about1.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body >
+    
+
+
+    <!-- Top Banner Image Section -->
+    <div class="top-image-section">
+        <!-- <div class="import-image-text-wrapper">
+          <div class="import-image-text-overlay-right">
+            <h1>Logistics</h1>
+          </div>
+        </div> -->
+        <img src="{% static 'images/pexels-tudor-smith-115809339-13008064.jpg' %}" alt="About Us Banner">
+      </div>
+    
+    
+      
+  
+    <!-- Breadcrumb Section -->
+    <div class="breadcrumb-section">
+        <div class="container">
+          <nav class="breadcrumb-nav" aria-label="breadcrumb">
+            <ul class="breadcrumb-list">
+              <li><a href="/">Home</a></li>
+              <li><a href="/services">Services</a></li>              
+              <li class="active">Logistics & Shipping </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+      
+      
+    
+    <!-- Overview Content Section -->
+    <div class="overview-section">
+        <div class="overview-content container">
+          <h2>Logistics & Shipping</h2>
+          <p>
+            At Anzu International, our Logistics & Shipping services are designed to ensure reliable and timely movement of goods across domestic and international routes. We simplify complex supply chains through customized transport solutions.
+          </p>
+          <p>
+            Backed by a global network of freight partners, we manage multi-modal shipping—by sea, air, and land—covering everything from port handling and customs clearance to last-mile delivery and warehousing.
+          </p>
+          <p>
+            Whether you're importing raw materials or exporting finished goods, our logistics experts coordinate every step with transparency, precision, and real-time tracking. Partner with Anzu International for dependable and efficient logistics support.
+          </p>
+        </div>
+      </div>
+      
+      
+
+      
+      
+      
+      
+  
+      <section class="leadership-section">
+        <div class="leader-card">
+          <div class="leader-image">
+            <img src="{% static 'images/truck-logistics-operation-dusk.jpg' %}" alt="Freight Forwarding">
+          </div>
+          <div class="leader-info">
+            <h3>Freight Forwarding</h3>
+            <h5>Seamless Sea, Air & Land Transport Solutions</h5>
+            <p>
+              We provide comprehensive freight forwarding services for both imports and exports. Whether by sea, air, or land, we coordinate end-to-end shipping with reliable global carriers—ensuring timely delivery and real-time tracking across all routes.
+            </p>
+          </div>
+        </div>
+      
+        <div class="leader-card">
+          <div class="leader-image">
+            <img src="{% static 'images/full-shot-men-discussing-document.jpg' %}" alt="Customs Clearance">
+          </div>
+          <div class="leader-info">
+            <h3>Customs Clearance</h3>
+            <h5>Expert Handling of Import & Export Regulations</h5>
+            <p>
+              Our experienced team ensures your shipments clear customs quickly and smoothly. We handle documentation, HS code classification, and regulatory compliance for various destination countries, minimizing delays and avoiding penalties.
+            </p>
+          </div>
+        </div>      
+        
+      
+        <div class="leader-card">
+          <div class="leader-image">
+            <img src="{% static 'images/pexels-tima-miroshnichenko-6169151.jpg' %}" alt="Packaging & Labeling">
+          </div>
+          <div class="leader-info">
+            <h3>Packaging & Labeling</h3>
+            <h5>Export-Ready, Compliant & Custom Solutions</h5>
+            <p>
+              We offer packaging and labeling solutions tailored to your destination market. From eco-friendly materials to branded packaging, we ensure secure transit and adherence to international standards for handling and presentation.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      
+
+      <section class="import-solutions-section">
+        <h2 class="section-title">Our Logistics Capabilities Include</h2>
+        <div class="solutions-grid">
+          <div class="solution-card">
+            <h3>Freight Management (Air, Sea, and Land)</h3>
+            <p>Tailored transport options using global carrier networks for speed, reliability, and cost-efficiency.</p>
+          </div>
+          <div class="solution-card">
+            <h3>Customs Brokerage</h3>
+            <p>Complete handling of documentation and customs clearance with local authority coordination.</p>
+          </div>
+          <div class="solution-card">
+            <h3>Real-time Tracking & Monitoring</h3>
+            <p>Stay updated with real-time insights and location tracking for every shipment, from dispatch to delivery.</p>
+          </div>
+          <div class="solution-card">
+            <h3>Supply Chain Optimization</h3>
+            <p>Strategic planning, route optimization, and warehousing coordination to streamline logistics operations.</p>
+          </div>
+          <div class="solution-card">
+            <h3>Door-to-Door Delivery Services</h3>
+            <p>Fully managed pickup and delivery services from origin to final destination—minimizing customer hassle.</p>
+          </div>
+          <div class="solution-card">
+            <h3>Reverse Logistics & Returns Management</h3>
+            <p>Seamlessly manage returns, replacements, and recycling processes to enhance customer satisfaction and sustainability.</p>
+          </div>
+          
+        </div>
+      </section>
+      
+      
+      
+      
+  
+    <!-- Glimpse of Our Story Section -->
+    <section class="glimpse-story-section" style="background-image: url(&quot;{% static 'images/man-with-helmet-working-warehouse.jpg' %}&quot;);">
+        <div class="glimpse-story-banner">
+          <div class="banner-content container">
+            <h3>Warehousing & Distribution</h3>
+            <p>
+            Anzu International offers comprehensive warehousing and distribution services designed to streamline your supply chain. From secure storage and inventory management to efficient order fulfillment and timely delivery, we ensure your goods are always in the right place at the right time.
+            </p>
+            <a href="{% url 'warehousing_distribution' %}" class="know-more-button">Explore Warehousing & Distribution</a>
+
+          </div>
+        </div>
+      </section>
+      
+      
+      
+ 
+  <style>
+
+.import-image-text-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 500px;
+    width: 500px;
+    background-color: rgba(53, 45, 45, 0.3); /* semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .import-image-text-overlay-right {
+    color: rgb(0, 0, 0);
+    font-size: 4rem;
+    font-family: 'Allura', cursive;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    .import-image-text-overlay-right {
+      font-size: 6rem;
+    }
+  }
+  .three-images-section {
+    overflow: hidden;
+    width: 100%;
+    background-color: #fff; /* Optional: for contrast */
+    padding: 20px 0;
+  }
+  
+  .three-images-slider {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .three-images-track {
+    display: flex;
+    width: calc(300px * 6); /* Adjust based on image size & count */
+    animation: scroll-left 20s linear infinite;
+  }
+  
+  .three-images-track img {
+    width: 300px; /* Adjust as needed */
+    height: auto;
+    margin: 0 10px;
+    border-radius: 8px;
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .import-solutions-section {
+  padding: 60px 20px;
+  background: #f4f8fb;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  color: #1e3a8a;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.solution-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.solution-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.solution-card h3 {
+  color: #ff6600;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.solution-card p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+
+
+</style>
+
+  
+</body>
+{% endblock %}

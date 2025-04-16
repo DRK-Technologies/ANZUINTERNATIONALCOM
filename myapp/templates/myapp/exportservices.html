@@ -1,0 +1,287 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}Export Services{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- <link rel="stylesheet" href="{% static 'css/home.css' %}"> -->
+  <link rel="stylesheet" href="{% static 'css/about1.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body >
+    
+
+
+    <!-- Top Banner Image Section -->
+    <div class="top-image-section">
+      <div class="import-image-text-wrapper">
+        <div class="import-image-text-overlay-right">
+          <h1>Export</h1>
+        </div>
+      </div>
+      <img src="{% static 'images/transport-logistics-products.jpg' %}" alt="About Us Banner">
+    </div>
+    
+    
+      
+  
+    <!-- Breadcrumb Section -->
+    <div class="breadcrumb-section">
+        <div class="container">
+          <nav class="breadcrumb-nav" aria-label="breadcrumb">
+            <ul class="breadcrumb-list">
+              <li><a href="/">Home</a></li>
+              <li><a href="/services">Services</a></li>              
+              <li class="active">Export Services</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+      
+      
+    
+    <!-- Overview Content Section -->
+    <div class="overview-section">
+    <div class="overview-content container">
+      <h2>Export Services</h2>
+      <p>
+        At Anzu International, our Export Services are crafted to connect quality Indian products with global markets. We act as your dependable export partner, facilitating smooth and efficient international trade operations.
+      </p>
+      <p>
+        With deep-rooted supplier relationships and logistics expertise, we export a diverse portfolio of goods—including agricultural products, industrial materials, and eco-friendly solutions—ensuring each shipment meets destination market standards.
+      </p>
+      <p>
+        From product sourcing and quality inspection to documentation and global delivery, our team handles the full export cycle with professionalism and precision. Choose Anzu International for reliable, scalable, and market-ready export solutions.
+      </p>
+    </div>
+  </div>
+  
+      
+
+      
+      
+      
+      
+  
+      <section class="leadership-section">
+        <div class="leader-card">
+            <div class="leader-image">
+              <img src="{% static 'images/raw-cashews-nuts-bowl-dark-background_1.jpg' %}" alt="Cashew Nuts">
+            </div>
+            <div class="leader-info">
+              <h3>Cashew Nuts</h3>
+              <h5>Premium Cashew Exports for Global Distribution</h5>
+              <p>
+                We export top-grade cashew nuts sourced from trusted farms, processed under strict quality controls to retain freshness and flavor. Available in various grades and packaging options, our cashews are shipped worldwide to meet the needs of retailers, distributors, and food manufacturers.
+              </p>
+            </div>
+          </div>
+        
+      
+        <div class="leader-card">
+          <div class="leader-image">
+            <img src="{% static 'images/abstract-still-life-with-charcoal-close-up.jpg' %}" alt="Charcoal Briquettes">
+          </div>
+          <div class="leader-info">
+            <h3>Charcoal Briquettes</h3>
+            <h5>Efficient & Sustainable Fuel Exports</h5>
+            <p>
+              We supply premium charcoal briquettes known for high heat output and low ash residue, ideal for barbecue and industrial use. Sourced from sustainable materials, our briquettes meet environmental and export compliance across major global markets.
+            </p>
+          </div>
+        </div>
+      
+        <div class="leader-card">
+          <div class="leader-image">
+            <img src="{% static 'images/woman-taking-care-her-plant-baby.jpg' %}" alt="Cocopeat">
+          </div>
+          <div class="leader-info">
+            <h3>Cocopeat</h3>
+            <h5>Organic Growing Medium for Horticulture Exports</h5>
+            <p>
+              Our cocopeat exports support sustainable agriculture and horticulture industries worldwide. Processed from premium coconut husks, we offer cocopeat in blocks, bricks, and loose forms—ensuring excellent water retention and soil conditioning for growers.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+
+      <section class="import-solutions-section">
+        <h2 class="section-title">Our Export Solutions Include</h2>
+        <div class="solutions-grid">
+          <div class="solution-card">
+            <h3>Market Research & Feasibility Studies</h3>
+            <p>Identify top-performing countries, emerging trends, and competitor landscapes to guide your export strategy.</p>
+          </div>
+          <div class="solution-card">
+            <h3>Export Licensing & Trade Compliance</h3>
+            <p>Ensure all legal requirements, certifications, and documentation are in place for smooth cross-border transactions.</p>
+          </div>
+          <div class="solution-card">
+            <h3>Shipping & International Logistics</h3>
+            <p>Partner with our global freight network to manage air, sea, and land transport efficiently and cost-effectively.</p>
+          </div>
+          <div class="solution-card">
+            <h3>Product Packaging & Labeling</h3>
+            <p>Get export-ready packaging customized for destination market regulations and product protection.</p>
+          </div>
+          <div class="solution-card">
+            <h3>Global Sales & Distribution Support</h3>
+            <p>Access trusted B2B and B2C distribution channels and increase your brand's global footprint.</p>
+          </div>
+          <div class="solution-card">
+            <h3>Trade Finance & Payment Solutions</h3>
+            <p>Receive guidance on Letters of Credit, secure payment gateways, and risk management solutions.</p>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+  
+    <!-- Glimpse of Our Story Section -->
+    <section class="glimpse-story-section" style="background-image: url(&quot;{% static 'images/truck-driver-occupation.jpg' %}&quot;);">
+        <div class="glimpse-story-banner">
+          <div class="banner-content container">
+            <h3>Logistics & Shipping Solutions</h3>
+            <p>
+              Anzu International delivers seamless logistics and global shipping services tailored to your supply chain needs. From port handling and freight coordination to last-mile delivery, we ensure efficiency, transparency, and on-time execution across borders.
+            </p>
+            <a href="{% url 'logistics_shipping' %}" class="know-more-button">Explore Logistics</a>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+ 
+  <style>
+
+.import-image-text-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 500px;
+    width: 500px;
+    background-color: rgba(53, 45, 45, 0.3); /* semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .import-image-text-overlay-right {
+    color: rgb(255, 251, 0);
+    font-size: 4rem;
+    font-family: 'Allura', cursive;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    .import-image-text-overlay-right {
+      font-size: 6rem;
+    }
+  }
+  .three-images-section {
+    overflow: hidden;
+    width: 100%;
+    background-color: #fff; /* Optional: for contrast */
+    padding: 20px 0;
+  }
+  
+  .three-images-slider {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .three-images-track {
+    display: flex;
+    width: calc(300px * 6); /* Adjust based on image size & count */
+    animation: scroll-left 20s linear infinite;
+  }
+  
+  .three-images-track img {
+    width: 300px; /* Adjust as needed */
+    height: auto;
+    margin: 0 10px;
+    border-radius: 8px;
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .import-solutions-section {
+  padding: 60px 20px;
+  background: #f4f8fb;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  color: #1e3a8a;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.solution-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.solution-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.solution-card h3 {
+  color: #ff6600;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.solution-card p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+
+
+</style>
+
+  
+</body>
+{% endblock %}

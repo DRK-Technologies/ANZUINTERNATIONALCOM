@@ -1,0 +1,291 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}Warehousing & Distribution{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- <link rel="stylesheet" href="{% static 'css/home.css' %}"> -->
+  <link rel="stylesheet" href="{% static 'css/about1.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body >
+    
+
+
+    <!-- Top Banner Image Section -->
+    <div class="top-image-section">
+        <!-- <div class="import-image-text-wrapper">
+          <div class="import-image-text-overlay-right">
+            <h1>Logistics</h1>
+          </div>
+        </div> -->
+        <img src="{% static 'images/view-inside-new-warehouse-mezzanine-floor-looking-into-hall.jpg' %}" alt="About Us Banner">
+      </div>
+    
+    
+      
+  
+    <!-- Breadcrumb Section -->
+    <div class="breadcrumb-section">
+        <div class="container">
+          <nav class="breadcrumb-nav" aria-label="breadcrumb">
+            <ul class="breadcrumb-list">
+              <li><a href="/">Home</a></li>
+              <li><a href="/services">Services</a></li>              
+              <li class="active">Warehousing & Distribution </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+      
+      
+    
+    <!-- Overview Content Section -->
+    <div class="overview-section">
+        <div class="overview-content container">
+            <h2>Warehousing & Distribution</h2>
+            <p>
+              At Anzu International, our Warehousing & Distribution services are designed to provide secure storage solutions and seamless product delivery across domestic and international markets. We ensure that your goods are stored, managed, and distributed efficiently.
+            </p>
+            <p>
+              With a strategic network of state-of-the-art warehouses and distribution centers, we offer inventory management, order fulfillment, and packaging solutions that streamline your supply chain from start to finish.
+            </p>
+            <p>
+              Whether you're managing large volumes of products or need customized delivery solutions, our team ensures timely distribution and accurate tracking. Partner with Anzu International for reliable warehousing and distribution services that keep your business running smoothly.
+            </p>
+            
+        </div>
+      </div>
+      
+      
+
+      
+      
+      
+      
+  
+      <section class="leadership-section">
+        <div class="leader-card">
+            <div class="leader-image">
+                <img src="{% static 'images/pexels-tiger-lily-4483775.jpg' %}" alt="Warehousing Solutions">
+            </div>
+            <div class="leader-info">
+                <h3>Warehousing Solutions</h3>
+                <h5>Secure, Scalable, and Efficient Storage</h5>
+                <p>
+                    We offer a range of warehousing solutions designed to keep your goods secure and well-managed. With state-of-the-art facilities, we provide flexible storage options that cater to diverse needs—whether long-term storage or short-term inventory management.
+                </p>
+            </div>
+        </div>
+    
+        <div class="leader-card">
+            <div class="leader-image">
+                <img src="{% static 'images/pexels-tiger-lily-4483942.jpg' %}" alt="Inventory Management">
+            </div>
+            <div class="leader-info">
+                <h3>Inventory Management</h3>
+                <h5>Real-Time Tracking & Efficient Stock Control</h5>
+                <p>
+                    Our advanced inventory management system ensures accurate tracking, real-time updates, and optimized stock control. We provide seamless integration with your supply chain to reduce delays and improve overall efficiency.
+                </p>
+            </div>
+        </div>
+    
+        <div class="leader-card">
+            <div class="leader-image">
+                <img src="{% static 'images/pexels-tima-miroshnichenko-6169668.jpg' %}" alt="Order Fulfillment">
+            </div>
+            <div class="leader-info">
+                <h3>Order Fulfillment</h3>
+                <h5>Fast, Accurate, and Reliable Delivery</h5>
+                <p>
+                    We manage the entire order fulfillment process, from picking and packing to shipping and final delivery. Our distribution network ensures your products are delivered on time, every time, with customized solutions to fit your specific needs.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+      
+
+    <section class="import-solutions-section">
+        <h2 class="section-title">Our Storage & Fulfillment Services</h2>
+        <div class="solutions-grid">
+          <div class="solution-card">
+            <h3>Short-term & Long-term Storage</h3>
+            <p>Flexible warehousing options to support seasonal surges, bulk storage, or ongoing fulfillment requirements.</p>
+          </div>
+          <div class="solution-card">
+            <h3>Inventory Management</h3>
+            <p>Real-time tracking systems, intelligent stock control, and detailed reporting to ensure optimal inventory levels.</p>
+          </div>
+          <div class="solution-card">
+            <h3>Order Fulfillment & Distribution</h3>
+            <p>Efficient pick-pack-ship operations combined with integrated last-mile delivery solutions for fast order turnaround.</p>
+          </div>
+          <div class="solution-card">
+            <h3>Cold Storage Facilities</h3>
+            <p>Temperature-controlled warehousing for perishable and sensitive goods like food products, pharmaceuticals, and chemicals.</p>
+          </div>
+          <div class="solution-card">
+            <h3>Supply Chain Integration</h3>
+            <p>End-to-end data syncing and system integration to improve demand forecasting, auto-replenishment, and visibility.</p>
+          </div>
+          <div class="solution-card">
+            <h3>Value-Added Services</h3>
+            <p>Custom labeling, kitting, repackaging, and product assembly services to enhance operational efficiency and customer satisfaction.</p>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+      
+      
+  
+    <!-- Glimpse of Our Story Section -->
+    <section class="glimpse-story-section" style="background-image: url(&quot;{% static 'images/pexels-rdne-7414284.jpg' %}&quot;);">
+        <div class="glimpse-story-banner">
+          <div class="banner-content container">
+            <h3>Let’s Build Something Global Together</h3>
+            <p>
+              From exports and imports to logistics and warehousing, Anzu International delivers end-to-end solutions tailored to your business. Ready to take the next step? Let's start a conversation and explore how we can support your global growth.
+            </p>
+            <a href="{% url 'contact' %}" class="know-more-button">Get in Touch</a>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+      
+ 
+  <style>
+
+.import-image-text-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 500px;
+    width: 500px;
+    background-color: rgba(53, 45, 45, 0.3); /* semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .import-image-text-overlay-right {
+    color: rgb(0, 0, 0);
+    font-size: 4rem;
+    font-family: 'Allura', cursive;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    .import-image-text-overlay-right {
+      font-size: 6rem;
+    }
+  }
+  .three-images-section {
+    overflow: hidden;
+    width: 100%;
+    background-color: #fff; /* Optional: for contrast */
+    padding: 20px 0;
+  }
+  
+  .three-images-slider {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .three-images-track {
+    display: flex;
+    width: calc(300px * 6); /* Adjust based on image size & count */
+    animation: scroll-left 20s linear infinite;
+  }
+  
+  .three-images-track img {
+    width: 300px; /* Adjust as needed */
+    height: auto;
+    margin: 0 10px;
+    border-radius: 8px;
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .import-solutions-section {
+  padding: 60px 20px;
+  background: #f4f8fb;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  color: #1e3a8a;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.solution-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.solution-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.solution-card h3 {
+  color: #ff6600;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.solution-card p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+
+
+</style>
+
+  
+</body>
+{% endblock %}

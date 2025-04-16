@@ -1,0 +1,201 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}Anzu International{% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/home1.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--Slider-->
+  <div id="slider">
+    <div class="slide">
+      <video autoplay muted loop playsinline>
+        <source src="{% static 'images/15695701-hd_1920_1080_30fps.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  <div class="slide">
+      <video autoplay muted loop playsinline>
+        <source src="{% static 'images/vid2.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="slide">
+      <video autoplay muted loop playsinline>
+        <source src="{% static 'images/4477613-hd_1920_1080_30fps.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="slide">
+      <video autoplay muted loop playsinline>
+        <source src="{% static 'images/cashew.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="slide">
+      <video autoplay muted loop playsinline>
+        <source src="{% static 'images/vid5.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="slide">
+      <video autoplay muted loop playsinline>
+        <source src="{% static 'images/vid6.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    
+    <!--Arrows-->
+    <span class="controls" onclick="prevSlide(-1)" id="left-arrow">
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    </span>
+    <span class="controls" onclick="nextSlide(1)" id="right-arrow">
+      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+    </span>
+  </div>
+
+  <!--Dots-->
+  <div id="dots-con">
+    <span class="dot" onclick="currentSlide(0)"></span>
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
+
+  <section id="key-facts">
+    <div class="container" data-aos="fade-up">
+      <h2>Key Facts</h2>
+      <div class="facts-grid">
+        <!-- 4.2B USD turnover -->
+        <div class="fact">
+          <span class="fact-plus">></span>
+          <span class="fact-number counter" data-target="36" data-step="1" data-time-interval="40">0</span>
+          <span class="fact-label">Mn</span>
+          <p class="fact-description bold-big">USD</p>
+          <p class="fact-description">Turnover in 2024 from global imports and exports</p>
+        </div>
+
+        <!-- 1500 employees -->
+        <div class="fact">
+          <span class="fact-number counter" data-target="1000" data-step="10" data-time-interval="20">0</span>
+          <span class="fact-plus">+</span>
+          <p class="fact-description bold-big">Employees</p>
+          <p class="fact-description">Working across multiple countries in supply chain, logistics, and operations</p>
+        </div>
+
+        <!-- 2000+ partners & clients -->
+        <div class="fact">
+          <span class="fact-number counter" data-target="2000" data-step="20" data-time-interval="30">0</span>
+          <span class="fact-plus">+</span>
+          <p class="fact-description bold-big">Clients & Partners</p>
+          <p class="fact-description">Serving clients across various industries around the globe</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sustainability">
+    <div class="container" data-aos="fade-up">
+      <h2>Sustainability at the Heart of Our Business</h2>
+      <div class="sustainability-content">
+        <div class="sustainability-item">
+          <h3>Eco-Friendly Practices</h3>
+          <p>We are committed to reducing our carbon footprint through energy-efficient operations, sustainable sourcing, and waste reduction initiatives across all our processes.</p>
+        </div>
+        <div class="sustainability-item">
+          <h3>Ethical Sourcing</h3>
+          <p>Our products are sourced responsibly, ensuring fair trade practices and supporting communities around the globe. We work closely with our suppliers to promote ethical labor standards.</p>
+        </div>
+        <div class="sustainability-item">
+          <h3>Green Logistics</h3>
+          <p>Our logistics network is optimized for energy efficiency, and we continuously explore new solutions to reduce emissions and minimize the environmental impact of transportation.</p>
+        </div>
+      </div>
+      <div class="sustainability-commitment">
+        <p>Our commitment to sustainability is reflected in our goal to achieve carbon neutrality by 2030. We continuously innovate to create value for our business while preserving the planet for future generations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="four-pillars">
+	<div class="container" data-aos="fade-up">
+	  <h2>Explore Our Four Pillars</h2>
+	  <div class="pillars-content">
+		<div class="pillar-item consumer">
+		  <!-- <img src="{% static 'images/consumer-logo.png' %}" alt="Consumer Logo" class="pillar-logo"> -->
+		  <h3>Delivering Quality Products to Global Markets</h3>
+		  <p>We are committed to exporting premium goods that meet international standards, ensuring quality, freshness, and reliability in every shipment to our global customers.</p>
+		</div>
+  
+		<div class="pillar-item environment">
+		  <!-- <img src="{% static 'images/environment-logo.png' %}" alt="Environment Logo" class="pillar-logo"> -->
+		  <h3>Promoting Sustainable Trade Practices</h3>
+		  <p>We prioritize eco-conscious logistics and responsible sourcing, reducing our environmental footprint while ensuring ethical practices in every stage of trade.</p>
+		</div>
+  
+		<div class="pillar-item social">
+		  <!-- <img src="{% static 'images/social-logo.png' %}" alt="Social Logo" class="pillar-logo"> -->
+		  <h3>Supporting Communities Through Fair Trade</h3>
+		  <p>Our partnerships empower local producers and communities, ensuring fair pricing, transparency, and inclusive growth across our supply chains.</p>
+		</div>
+  
+		<div class="pillar-item employee">
+		  <!-- <img src="{% static 'images/employees-logo.png' %}" alt="Employee Logo" class="pillar-logo"> -->
+		  <h3>Empowering Teams to Drive Global Growth</h3>
+		  <p>Our team of dedicated professionals plays a key role in expanding international trade, supported by a culture of trust, innovation, and development.</p>
+		</div>
+	  </div>
+	</div>
+  </section>
+  
+  <section class="careers">
+    <div class="careers-wrapper" data-aos="fade-up">
+      <div class="careers-image">
+        <img src="{% static 'images/austin-distel-wD1LRb9OeEo-unsplash.jpg' %}" alt="Careers in Import and Export Business">
+      </div>
+      <div class="careers-text">
+        <h2>Join Our Global Team</h2>
+        <p>At Anzu International, we believe that our people are the key to our success. As an international import and export business, we thrive on connecting markets and delivering high-quality goods across the globe. We offer a dynamic environment where innovative thinkers and global professionals can make an impact.</p>
+        <a href="{% url 'contact' %}"><button class="know-more-button">Know More</button></a>
+
+
+        <!-- <h3>Why Work With Us?</h3>
+        <ul>
+          <li><strong>Global Reach:</strong> Work in a fast-paced, international setting with colleagues and partners from around the world.</li>
+          <li><strong>Growth Opportunities:</strong> We encourage continuous learning and professional growth, offering opportunities in a variety of fields such as logistics, sales, finance, and supply chain management.</li>
+          <li><strong>Innovative Culture:</strong> Be a part of a team that is always evolving and pushing boundaries to meet the demands of global markets.</li>
+          <li><strong>Work-Life Balance:</strong> We understand the importance of personal well-being and offer flexible working conditions to help maintain a healthy balance.</li>
+        </ul> -->
+        <!-- <p>If you're passionate about the world of international trade and want to contribute to a company that's driving success in the import and export industry, we'd love to hear from you.</p>
+        <button class="apply-button">Apply Now</button> -->
+
+      </div>
+    </div>
+  </section>
+
+  <script src="{% static 'js/home.js' %}"></script>
+  <!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true, // animation occurs only once
+  });
+</script>
+
+
+</body>
+</html>
+
+{% endblock %}

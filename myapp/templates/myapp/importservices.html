@@ -1,0 +1,269 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}Import Services{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- <link rel="stylesheet" href="{% static 'css/home.css' %}"> -->
+  <link rel="stylesheet" href="{% static 'css/about1.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body >
+    
+
+
+    <!-- Top Banner Image Section -->
+    <div class="top-image-section">
+      <div class="import-image-text-wrapper">
+        <div class="import-image-text-overlay-right">
+          <h1>Import</h1>
+        </div>
+      </div>
+      <img src="{% static 'images/industrial-port-container-yard.jpg' %}" alt="About Us Banner">
+    </div>
+    
+    
+      
+  
+    <!-- Breadcrumb Section -->
+    <div class="breadcrumb-section">
+        <div class="container">
+          <nav class="breadcrumb-nav" aria-label="breadcrumb">
+            <ul class="breadcrumb-list">
+              <li><a href="/">Home</a></li>
+              <li><a href="/services">Services</a></li>              
+              <li class="active">Import Services</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+      
+      
+    <!-- Overview Content Section -->
+    <div class="overview-section">
+        <div class="overview-content container">
+          <h2>Import Services</h2>
+          <p>
+            At Anzu International, our Import Services are designed to streamline the sourcing of high-quality products from global markets. We connect businesses with trusted international suppliers, ensuring smooth and compliant import processes.
+          </p>
+          <p>
+            Leveraging strong partnerships across Asia, Africa, and the Middle East, we import a wide variety of commodities to meet the diverse needs of our clients—always prioritizing quality, consistency, and regulatory compliance.
+          </p>
+          <p>
+            From supplier selection and documentation to customs clearance and delivery, our experienced team manages every step of the import journey with precision and professionalism, making Anzu International your reliable partner for global sourcing.
+          </p>
+          
+        </div>
+      </div>
+
+      
+      
+      
+      
+  
+      <section class="leadership-section">
+        <div class="leader-card">
+          <div class="leader-image">
+            <img src="{% static 'images/pexels-kelly-1179532-2869015.jpg' %}" alt="Raw Cashew">
+          </div>
+          <div class="leader-info">
+            <h3>Raw Cashew</h3>
+            <h5>Premium-Grade Sourcing & Bulk Imports</h5>
+            <p>
+              We specialize in importing high-quality raw cashew nuts from West African origins, ensuring consistent supply and competitive pricing for processing units and wholesalers. Our robust sourcing network guarantees freshness and timely delivery across India and beyond.
+            </p>
+          </div>
+        </div>
+      
+        <div class="leader-card">
+          <div class="leader-image">
+            <img src="{% static 'images/pexels-cottonbro-5582490.jpg' %}" alt="Wooden Logs">
+          </div>
+          <div class="leader-info">
+            <h3>Wooden Logs</h3>
+            <h5>Reliable Imports for Industrial & Commercial Use</h5>
+            <p>
+              We import quality wooden logs from Africa and Southeast Asia, catering to furniture manufacturers, timber dealers, and construction firms. Our direct supplier engagement ensures legal compliance, sustainable sourcing, and consistent volume availability.
+            </p>
+          </div>
+        </div>
+      
+        <div class="leader-card">
+          <div class="leader-image">
+            <img src="{% static 'images/yellow-soy-beans.jpg' %}" alt="Soybean">
+          </div>
+          <div class="leader-info">
+            <h3>Soybean</h3>
+            <h5>Bulk Import Solutions for Feed & Food Industry</h5>
+            <p>
+              We import non-GMO and GMO soybeans for agricultural, feed, and food processing applications. With supply chains across the Americas and Asia, we offer volume flexibility, consistent quality, and custom delivery schedules for B2B buyers.
+            </p>
+          </div>
+        </div>
+
+        <div class="leader-card">
+          <div class="leader-image">
+            <img src="{% static 'images/pexels-melike-baran-407276327-31529336.jpg' %}" alt="Cotton Rags">
+          </div>
+          <div class="leader-info">
+            <h3>Cotton Rags</h3>
+            <h5>Reliable Imports of Recycled Cotton Wipers</h5>
+            <p>
+              We import premium-grade cotton rags sourced from trusted global suppliers. These recycled textile products are ideal for industrial cleaning, maintenance, and workshop use. Our imports comply with strict quality checks to meet the needs of our partners across India.
+            </p>
+          </div>
+        </div>
+        
+      </section>
+
+      <section class="import-solutions-section">
+        <h2 class="section-title">Our Import Solutions Include</h2>
+        <div class="solutions-grid">
+          <div class="solution-card">
+            <h3>Product Sourcing & Supplier Verification</h3>
+            <p>Connect with vetted suppliers, manufacturers, and exporters worldwide through reliable sourcing channels.</p>
+          </div>
+          <div class="solution-card">
+            <h3>Import Documentation & Compliance</h3>
+            <p>We prepare, review, and file all the necessary documentation for smooth import clearance.</p>
+          </div>
+          <div class="solution-card">
+            <h3>Customs Clearance & Tariff Consulting</h3>
+            <p>Avoid delays and penalties through expert customs handling and real-time HS code guidance.</p>
+          </div>
+          <div class="solution-card">
+            <h3>Freight Forwarding & Logistics</h3>
+            <p>We manage your imports from port to warehouse with trusted sea, air, and inland transport partners.</p>
+          </div>
+          <div class="solution-card">
+            <h3>Warehousing & Storage Solutions</h3>
+            <p>Get access to secure storage options and real-time inventory tracking for your imported goods.</p>
+          </div>
+          <div class="solution-card">
+            <h3>Quality Control & Inspection</h3>
+            <p>Ensure product quality with professional third-party inspection and pre-shipment verification.</p>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+  
+    <!-- Glimpse of Our Story Section -->
+    <section class="glimpse-story-section" style="background-image: url(&quot;{% static 'images/transport-logistics-products.jpg' %}&quot;);">
+        <div class="glimpse-story-banner">
+          <div class="banner-content container">
+            <h3>Explore Our Export Services</h3>
+            <p>
+              Discover how Anzu International connects Indian products with global markets. From agricultural produce to industrial goods, we ensure timely deliveries, international compliance, and trusted partnerships that scale your business beyond borders.
+            </p>
+            <a href="{% url 'exportservices' %}" class="know-more-button">Explore Exports</a>
+          </div>
+        </div>
+      </section>
+      
+      
+ 
+  <style>
+  .three-images-section {
+    overflow: hidden;
+    width: 100%;
+    background-color: #fff; /* Optional: for contrast */
+    padding: 20px 0;
+  }
+  
+  .three-images-slider {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .three-images-track {
+    display: flex;
+    width: calc(300px * 6); /* Adjust based on image size & count */
+    animation: scroll-left 20s linear infinite;
+  }
+  
+  .three-images-track img {
+    width: 300px; /* Adjust as needed */
+    height: auto;
+    margin: 0 10px;
+    border-radius: 8px;
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .import-solutions-section {
+  padding: 60px 20px;
+  background: #f4f8fb;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  color: #1e3a8a;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.solution-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.solution-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.solution-card h3 {
+  color: #ff6600;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.solution-card p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+
+
+</style>
+
+  
+</body>
+{% endblock %}
