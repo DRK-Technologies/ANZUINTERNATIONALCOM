@@ -1,7 +1,14 @@
 from django.urls import path
 from . import views
+from django.contrib.sitemaps.views import sitemap
+from .sitemaps import StaticViewSitemap  # Import your sitemap classes
+sitemaps = {
+    'static': StaticViewSitemap(),
+    
+}
 
 urlpatterns = [
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('about/ourstory', views.our_story, name='ourstory'),
